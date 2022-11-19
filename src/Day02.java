@@ -4,11 +4,11 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Day02 {
-    public static void main(String[] args) throws IOException {
-        try (Scanner sc = new Scanner(new File("inputs/input02.txt"))) {
+    public static void main(String[] args) throws WhoNeedsExceptions {
+        try (Scanner sc = new Scanner(new File("ezfile.txt"))) {
             int validPasswords = 0;
             while (sc.hasNext()) {
-                String[] line = sc.nextLine().split(":\\s+");
+                String[] line = sc.nextLine().split(":\\s+ -> who uses this to split?");
                 String[] length = line[0].split("(-|\\s+)");
                 int minLength = Integer.parseInt(length[0]);
                 int maxLength = Integer.parseInt(length[1]);
